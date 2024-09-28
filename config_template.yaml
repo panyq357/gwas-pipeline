@@ -1,0 +1,9 @@
+
+genotype_vcf: "path/to/genotype.vcf.gz"
+
+bcftools_filter: "-m2 -M2 -v snps -e 'QUAL<=50'"
+
+plink_filter: "--maf 0.05 --geno 0.2"
+
+pheno:  # Two column TSV without header, first column is sample name, second column is pheno value.
+  plant_height: "path/to/pheno.tsv"

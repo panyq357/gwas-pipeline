@@ -1,0 +1,10 @@
+
+configfile: "config.yaml"
+
+include: "rules/filter_snp.smk"
+include: "rules/gemma.smk"
+# include: "rules/candidates.smk"
+
+rule all:
+    input:
+        expand("results/{pheno}/{pheno}.gemma.man.png", pheno=config["pheno"])
